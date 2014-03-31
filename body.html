@@ -1,0 +1,22 @@
+<body>
+	<div class="page">
+		<div class="container">
+			<div class="header" id="header">
+				<INCLURE{fond=header/#ENV{type-page},env} />
+			</div>
+			[<div class="navbar navbar-inverse navbar-responsive" id="nav">
+				(#INCLURE{fond=inclure/nav,env}|navbar_responsive)
+			</div>]
+			<div class="row">			    
+				<div class="content span8 " id="content">
+				    <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}>
+					<INCLURE{fond=content/#ENV{type-page},env,id_rubrique,id_secteur=#ID_SECTEUR,id_trad,composition=#COMPOSITION} />
+					</BOUCLE_principale_rubrique>
+				</div>
+			</div>
+			<div class="footer" id="footer">
+				<INCLURE{fond=footer/#ENV{type-page},env} />
+			</div>
+		</div>
+	</div>
+</body>

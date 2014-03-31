@@ -1,7 +1,7 @@
 <paquet
 	prefix="embobiner"
 	categorie="squelette"
-	version="1.0.0"
+	version="1.0.1"
 	etat="dev"
 	compatibilite="[3.0.16;3.0.*]"
 	logo="prive/themes/spip/images/embobiner-64.png"
@@ -19,6 +19,9 @@
 
 	<licence>GNU/GPL</licence>
 
+	<necessite nom="wsps_html5" compatibilite="[1.0.2;]" />
+	<necessite nom="partenaires" compatibilite="[1.5.1;]" />
+		
 	<!--
 		Exemple de commandes
 		* dependances
