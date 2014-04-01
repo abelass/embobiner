@@ -1,16 +1,20 @@
-<body>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 	<div class="page">
 		<div class="container">
 			<div class="header" id="header">
 				<INCLURE{fond=header/#ENV{type-page},env} />
 			</div>
 			[<div class="navbar navbar-inverse navbar-responsive" id="nav">
-				(#INCLURE{fond=inclure/nav,env}|navbar_responsive)
+				(#INCLURE{fond=inclure/nav,env})
 			</div>]
 			<div class="row">			    
 				<div class="content span8 " id="content">
-				    <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}>
-					<INCLURE{fond=content/#ENV{type-page},env,id_rubrique,id_secteur=#ID_SECTEUR,id_trad,composition=#COMPOSITION} />
+				    <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}>
+				    <div class="section[ (#COMPTEUR_BOUCLE|=={1}|?{sTop,s[(#COMPTEUR_BOUCLE|moins{1})]})]">
+				        <div class="inner">
+					       <INCLURE{fond=content/#ENV{type-page},env,id_rubrique,id_secteur=#ID_SECTEUR,id_trad,composition=#COMPOSITION} />
+					   </div>
+					</div>
 					</BOUCLE_principale_rubrique>
 				</div>
 			</div>
