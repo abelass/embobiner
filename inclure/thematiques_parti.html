@@ -1,11 +1,11 @@
 <BOUCLE_partenaire(PARTENAIRES){id_partenaire}>
   [(#LOGO_PARTENAIRE|image_reduire{100})]
 <B_thematiques>
-  <ul id="thematiques_parties" class="menu thematiques_parties">
+  <ul id="thematiques_parties" class="menu thematiques_parti">
 	<BOUCLE_thematiques(ARTICLES partenaires_liens){id_partenaire}>
 	  <li>		
 		<BOUCLE_rub(RUBRIQUES){id_rubrique}>
-		  <a href="[(#URL_PAGE{thematiques}
+		  <a class="mediabox"  rel="article" href="[(#URL_PAGE{thematiques}
 				   |parametre_url{id_article,#ID_ARTICLE}
 				   |parametre_url{type,article})]" title="#TITRE"><h2 class="titre">#TITRE</h2>
 		  </a>		  
