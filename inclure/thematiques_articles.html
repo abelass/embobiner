@@ -1,0 +1,21 @@
+<B_thematiques>
+  	<BOUCLE_rub(RUBRIQUES){id_rubrique}>
+	  <h2>#TITRE</h2>
+	  [<div class="teste">(#INTRODUCTION)</div>]
+  </BOUCLE_rub>
+  <ul id="thematiques_articles" class="menu thematiques_articles">
+	<BOUCLE_thematiques(ARTICLES){id_rubrique}{tout}{par num titre,titre}>
+	  <li>
+	  <BOUCLE_parties(PARTENAIRES){id_article}{0,1}>
+		<a href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti})]" title="#NOM">
+		[(#LOGO_PARTENAIRE|image_reduire{100})]
+		</a>
+	  </BOUCLE_parties>	
+		[<div class="texte"><a href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#NOM">
+		(#INTRODUCTION)
+		</a>
+		</div>]
+	  </li>
+	</BOUCLE_thematiques>
+  </ul>
+</B_thematiques>
