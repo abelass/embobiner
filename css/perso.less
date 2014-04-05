@@ -26,8 +26,9 @@
 	}
 .subMenu.fxd{width:100%}
 
-.menu li{
-  float:left;list-style:none;margin:0 0.5em
+ul.menu {
+  li{float:left;list-style:none;margin:0 0.5em
+  }
 }
 
 .navbar-inverse .nav > li > a.active{color:red;font-weight:bold}
@@ -47,7 +48,10 @@
 
 
   /*Intro*/
-  .section.intro{margin-top:@navbarHeight}
+  .section.intro{
+    margin-top:@navbarHeight;
+    .nav{clear:both}
+    }
   
   /*Video*/
  .section.video{

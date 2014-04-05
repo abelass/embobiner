@@ -1,0 +1,11 @@
+<B_partenaires>
+  <ul id="parties" class="menu parties">
+	<BOUCLE_partenaires(PARTENAIRES){par num nom, nom}>	  
+	  <li>
+	      <a class="mediabox" rel="parties" href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti})]" title="#NOM">
+		  [(#LOGO_PARTENAIRE|image_reduire{100})]
+		  </a>
+	  </li>
+	</BOUCLE_partenaires>
+  </ul>
+</B_partenaires>

@@ -1,7 +1,6 @@
 <B_thematiques>
   <ul id="thematiques_parties" class="menu thematiques_parties">
-	<BOUCLE_thematiques(partenaires_liens){id_partenaire}{objet=article}{tout}>
-	  
+	<BOUCLE_thematiques(partenaires_liens){id_partenaire}{objet=article}{tout}>	  
 	  <li>
 		[(#LOGO_PARTENAIRE|image_reduire{100})]
 		<BOUCLE_rub(RUBRIQUES){id_rubrique=#ID_RUBRIQUE}>
@@ -17,4 +16,4 @@
 	  </li>
 	</BOUCLE_thematiques>
   </ul>
-</B_thematiques>#ENV
+</B_thematiques>

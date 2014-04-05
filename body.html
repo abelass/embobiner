@@ -23,9 +23,14 @@
                             </header>
                             <div [class="(#EDIT{meta-descriptif_site})"]>
                                      #DESCRIPTIF_SITE_SPIP 
-                                 </div>  
-				            <INCLURE{fond=inclure/thematiques,id_rubrique=1,env,ajax,}/>
-				            
+                            </div>
+                            <nav class="nav">
+				                <INCLURE{fond=inclure/thematiques,id_rubrique=1,env,ajax,}/>
+				            </nav> 
+				            <nav class="nav">
+                                <INCLURE{fond=inclure/parties,env,ajax,}/>
+                            </nav>
+                             				            
 				         </div>
 				    </div>
 				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #GET{one_page}|oui}>

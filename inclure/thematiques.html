@@ -1,7 +1,7 @@
 <B_thematiques>
   <ul id="them1" class="menu thematiques">
 	<BOUCLE_thematiques(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}{par num titre,titre}>
-	  <li><a href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" title="#TITRE">#TITRE</a></li>
+	  <li><a class="mediabox" rel="thematiques" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" title="#TITRE">#TITRE</a></li>
 	</BOUCLE_thematiques>
   </ul>
 </B_thematiques>
