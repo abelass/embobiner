@@ -1,5 +1,4 @@
 [(#ENV{id_rubrique}|ou{#ENV{id_article}}|oui)#SET{one_page,oui}]
-
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 	<div class="page">
 		<div class="container">
@@ -12,10 +11,27 @@
 			</div>]]
 			<div class="row">		    
 				<div class="content span8 " id="content">
+				    <div class="section intro">
+                        <div class="inner"> 
+                            <header class="accueil clearfix span9">
+                                <h1 id="logo_site_spip "[ class="(#EDIT{meta-nom_site})"]>#NOM_SITE_SPIP
+                                </h1>
+                                [<div id="slogan_site_spip"[ class="(#EDIT{meta-slogan_site})"]>
+                                    (#SLOGAN_SITE_SPIP)
+                                 </div>]
+                                 <div [class="(#EDIT{meta-descriptif_site})"]>
+                                     #DESCRIPTIF_SITE_SPIP 
+                                 </div>                              
+                            </header
+				            <INCLURE{fond=inclure/thematiques,id_rubrique=1,env,ajax,}/>
+				         </div>
+				    </div>
 				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #GET{one_page}|oui}>
+				  
 				    <div class="section[ (#COMPTEUR_BOUCLE|=={1}|?{sTop,s[(#COMPTEUR_BOUCLE|moins{1})]})]">
+				        
 				        <div class="inner">
-					       <INCLURE{fond=content/#ENV{type-page},env,id_rubrique,id_secteur=#ID_SECTEUR,id_trad,composition=#COMPOSITION} />
+					       <INCLURE{fond=content/rubrique,type-page=rubrique,env,id_rubrique,id_secteur=#ID_SECTEUR,id_trad,composition=#COMPOSITION} />
 					   </div>
 					</div>
 					</BOUCLE_principale_rubrique>

@@ -5,6 +5,11 @@
 		<li class="item menu-entree[ (#EXPOSE)]">
 			<a href="#" id="[(#COMPTEUR_BOUCLE|=={1}|?{sTop,s[(#COMPTEUR_BOUCLE|moins{1})]})]" >[(#TITRE|couper{80})]</a>
 		</li>
+		[(#COMPTEUR_BOUCLE|=={2}|oui)
+		<li class="item menu-entree logo">
+		    [(#LOGO_SITE_SPIP|image_reduire{100})]
+		</li>
+		]
 	 </BOUCLE_rubriques>
 	 </ul>
 </div>	
