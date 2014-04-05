@@ -1,8 +1,3 @@
-#SET{id_home,#CONFIG{wsps_html5/rubrique_accueil}|picker_selected{rubrique}}
-[(#GET{id_home}|is_array|oui)#SET{id_home,#CONFIG{wsps_html5/rubrique_accueil}|picker_selected{rubrique}|valeur_tableau{0}}]
-
-
-
-    <INCLURE{fond=structure,env,type-page=rubrique,id_rubrique=home} />
+<INCLURE{fond=structure,env,type-page=rubrique,id_rubrique=home} />
 
 
