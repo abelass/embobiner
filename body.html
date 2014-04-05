@@ -13,17 +13,18 @@
 				<div class="content span8 " id="content">
 				    <div class="section intro">
                         <div class="inner"> 
-                            <header class="accueil clearfix span9">
+                            <header class="accueil clearfix">
                                 <h1 id="logo_site_spip "[ class="(#EDIT{meta-nom_site})"]>#NOM_SITE_SPIP
                                 </h1>
                                 [<div id="slogan_site_spip"[ class="(#EDIT{meta-slogan_site})"]>
                                     (#SLOGAN_SITE_SPIP)
-                                 </div>]
-                                 <div [class="(#EDIT{meta-descriptif_site})"]>
+                                 </div>]                            
+                            </header>
+                            <div [class="(#EDIT{meta-descriptif_site})"]>
                                      #DESCRIPTIF_SITE_SPIP 
-                                 </div>                              
-                            </header
+                                 </div>  
 				            <INCLURE{fond=inclure/thematiques,id_rubrique=1,env,ajax,}/>
+				            
 				         </div>
 				    </div>
 				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #GET{one_page}|oui}>
