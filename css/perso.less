@@ -1,3 +1,7 @@
+@import "css/variables.less";
+@import "css/mixins.less";
+
+
 /*Layout*/
 
 .row,.span8 {
@@ -16,7 +20,7 @@
 /*Menu*/
 .subMenu{
   width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	z-index: 1000;
 	}
@@ -26,16 +30,25 @@
   float:left;list-style:none;margin:0 0.5em
 }
 
-.section{min-height:400px}
-.menu.thematiques_articles li {width:16%}
-
 .navbar-inverse .nav > li > a.active{color:red;font-weight:bold}
 
+.navbar-inner {
+  box-shadow:none;
+}
+
 /*Les différentes blocs*/
-.section{
-  text-align:center;
+
+ .section{min-height:400px}
+ 
+ .inner {background:#ffffff}
+.menu.thematiques_articles li {width:16%}
+
+  /*Intro*/
+  .section.intro{margin-top:@navbarHeight}
+  
   /*Video*/
+ .section.video{
+   text-align:center;
   .player{min-height:400px;}
   .action{display:block;}
-  
-}
+  }

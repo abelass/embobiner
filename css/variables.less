@@ -180,9 +180,9 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+@navbarHeight:                    130px;
+@navbarBackgroundHighlight:       white;
+@navbarBackground:                white;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      #777;
@@ -195,18 +195,18 @@
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+@navbarInverseBackground:                transparent;
+@navbarInverseBackgroundHighlight:       @navbarInverseBackground;
+@navbarInverseBorder:                    @navbarInverseBackground;
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
-@navbarInverseLinkColorHover:            @white;
+@navbarInverseText:                      #000000;
+@navbarInverseLinkColor:                 @navbarInverseText;
+@navbarInverseLinkColorHover:            @grayLight;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
 @navbarInverseLinkBackgroundHover:       transparent;
 @navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
 
-@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackground:          @navbarInverseBackground;
 @navbarInverseSearchBackgroundFocus:     @white;
 @navbarInverseSearchBorder:              @navbarInverseBackground;
 @navbarInverseSearchPlaceholderColor:    #ccc;
