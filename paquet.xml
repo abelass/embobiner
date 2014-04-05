@@ -21,7 +21,7 @@
 
 	<necessite nom="wsps_html5" compatibilite="[1.0.2;]" />
 	<necessite nom="partenaires" compatibilite="[1.5.1;]" />
-		
+	<utilise nom="spipr_dist" compatibilite="[0.4.7;]" />		
 	<!--
 		Exemple de commandes
 		* dependances

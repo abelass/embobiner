@@ -1,27 +1,34 @@
+[(#ENV{id_rubrique}|ou{#ENV{id_article}}|oui)#SET{one_page,oui}]
+
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 	<div class="page">
 		<div class="container">
 			<div class="header" id="header">
 				<INCLURE{fond=header/#ENV{type-page},env} />
 			</div>
+			[(#ENV{type-page}|=={video}|non)
 			[<div class="navbar navbar-inverse navbar-responsive" id="nav">
 				(#INCLURE{fond=inclure/nav,env})
-			</div>]
+			</div>]]
 			<div class="row">		    
 				<div class="content span8 " id="content">
-				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #ENV{id_rubrique}|ou{#ENV{id_article}}|oui}>
+				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #GET{one_page}|oui}>
 				    <div class="section[ (#COMPTEUR_BOUCLE|=={1}|?{sTop,s[(#COMPTEUR_BOUCLE|moins{1})]})]">
 				        <div class="inner">
 					       <INCLURE{fond=content/#ENV{type-page},env,id_rubrique,id_secteur=#ID_SECTEUR,id_trad,composition=#COMPOSITION} />
 					   </div>
 					</div>
 					</BOUCLE_principale_rubrique>
-				   <INCLURE{fond=content/#ENV{type-page},env} />
+					<div class="section #ENV{type-page}">
+                        <div class="inner"> 
+				            <INCLURE{fond=content/#ENV{type-page},env} />
+				        </div>
+                    </div>
 			  <//B_principale_rubrique>
 				</div>
 			</div>
 			<div class="footer" id="footer">
-				<INCLURE{fond=footer/#ENV{type-page},env} />
+		       <INCLURE{fond=footer/#ENV{type-page},env} />
 			</div>
 		</div>
 	</div>
