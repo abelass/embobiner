@@ -1,7 +1,13 @@
-<script type="text/javascript" src="#CHEMIN{scripts/smint/js/jquery.smint.js}"></script>
+ <link rel="stylesheet" href="#CHEMIN{css/scrollable-horizontal.less}" type="text/css" media="screen" />
+<link rel="stylesheet" href="#CHEMIN{css/scrollable-buttons.less}" type="text/css" media="screen" />
+<script type="text/javascript" src="#CHEMIN{javascript/smint/js/jquery.smint.js}"></script>
+
+<script type="text/javascript" src="#CHEMIN{javascript/jquery.tools.min.js}"></script>
 
 <script type="text/javascript">
-$(document).ready( function() {
- $('.subMenu').smint();
- });
+	$(document).ready( function() {
+	 	$('.subMenu').smint();
+	  	$(".scrollable").scrollable();
+	 }); 
  </script>
+

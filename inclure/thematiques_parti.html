@@ -2,19 +2,32 @@
   [(#LOGO_PARTENAIRE|image_reduire{100})]
   <h2>#NOM</h2>
 <B_thematiques>
-  <ul id="thematiques_parties" class="menu thematiques_parti">
-	<BOUCLE_thematiques(ARTICLES partenaires_liens){id_partenaire}>
-	  <li>		
-		<BOUCLE_rub(RUBRIQUES){id_rubrique}>
-		  <a class="mediabox"  rel="article" href="[(#URL_PAGE{thematiques}
-				   |parametre_url{id_article,#ID_ARTICLE}
-				   |parametre_url{type,article})]" title="#TITRE"><h3 class="titre">#TITRE</h3>
-		  </a>		  
-		</BOUCLE_rub>		  
-	  </BOUCLE_parties>
-		[<div class="texte">(#INTRODUCTION)</div>]
-	  </li>
-	</BOUCLE_thematiques>
-  </ul>
+<a class="prev browse left"></a>
+<div class="scrollable">  
+	   <div class="items">
+	   		<div class="wrapper"> 
+				  <ul class="menu thematiques_parti">
+					<BOUCLE_thematiques(ARTICLES partenaires_liens){id_partenaire}>
+					  <li>		
+						<BOUCLE_rub(RUBRIQUES){id_rubrique}>
+						  <a class="mediabox"  rel="article" href="[(#URL_PAGE{thematiques}
+								   |parametre_url{id_article,#ID_ARTICLE}
+								   |parametre_url{type,article})]" title="#TITRE"><h3 class="titre">#TITRE</h3>
+						  </a>		  
+						</BOUCLE_rub>		  
+					  </BOUCLE_parties>
+						[<div class="texte">(#INTRODUCTION)</div>]
+					  </li>
+	[(#COMPTEUR_BOUCLE|modulo{5}|=={0}|et{#TOTAL_BOUCLE|>{5}}|oui)
+				  </ul>  
+			  </div>      
+		<div class="wrapper">
+			    <ul class="menu thematiques_parti">]					  
+					</BOUCLE_thematiques>
+				  </ul>
+			</div>		
+  		</div>
+</div>
+<a class="next browse right"></a>    				  
 </B_thematiques>
 </BOUCLE_partenaire>

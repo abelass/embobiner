@@ -1,7 +1,22 @@
 <B_thematiques>
-  <ul id="them1" class="menu thematiques">
-	<BOUCLE_thematiques(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}{par num titre,titre}>
-	  <li><a class="mediabox" rel="thematiques" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" title="#TITRE">#TITRE</a></li>
-	</BOUCLE_thematiques>
-  </ul>
+<a class="prev browse left"></a>
+<div class="scrollable">  
+	   <div class="items">
+	   		<div class="wrapper"> 
+				<ul class="menu thematiques">
+					<BOUCLE_thematiques(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}{par num titre,titre}>
+					  <li>
+					  	<a class="mediabox" rel="thematiques" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" title="#TITRE">#TITRE</a>
+					 </li>
+	[(#COMPTEUR_BOUCLE|modulo{5}|=={0}|et{#TOTAL_BOUCLE|>{5}}|oui)
+				  </ul>  
+			  </div>      
+		<div class="wrapper">
+			    <ul class="menu thematiques">]
+				</BOUCLE_thematiques>
+			  	</ul>
+			</div>		
+  		</div>
+</div>
+<a class="next browse right"></a>    
 </B_thematiques>
