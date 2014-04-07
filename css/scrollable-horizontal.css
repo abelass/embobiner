@@ -1,0 +1,44 @@
+@import "css/variables.less";
+@import "css/mixins.less";
+
+.scrollable {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 95%;
+	height:2em;
+	font-size:90%;
+	font-stretch:ultra-condensed;
+
+}
+
+.scrollable .items {
+	/* this cannot be too large */
+	width:2000em;
+	position:absolute;
+}
+
+.items div.wrapper {
+	float:left;
+	margin:0;
+}
+
+.scrollable ul {
+	margin:0;
+	padding:0;
+}
+
+/* single scrollable item */
+.scrollable li {
+	list-style:none;
+	float:left;
+	background-color:#fff;
+	margin:20px 20px 20px 0px;
+	padding:5px;
+	behavior: url(/PIE.htc);
+	
+}
+
+
+
