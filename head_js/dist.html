@@ -1,9 +1,6 @@
 <script type="text/javascript">
   $(document).ready( function() {
 	$('.subMenu').smint();
-	$(".scrollable").scrollable();
-	
-	
 	
 	//Initiate scrollable as normal
 	$(".scrollable").scrollable();
@@ -64,4 +61,7 @@
         
         });		
   }); 
+function showColorBox(imageURL) {
+ $.fn.colorbox({iframe: true, innerWidth: "1200px", innerHeight: "550px", transition: "elastic", opacity: .6, open: true, href: imageURL });
+}  
 </script>

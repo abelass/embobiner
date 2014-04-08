@@ -20,6 +20,7 @@
 	<necessite nom="partenaires" compatibilite="[1.5.1;]" />
 	<utilise nom="spipr_dist" compatibilite="[0.4.7;]" />
 	<utilise nom="Zcore" compatibilite="[2.3.0;]" />
+	<utilise nom="mediabox" compatibilite="[0.8.4;]" />	
 
 	<pipeline nom="jquery_plugins" inclure="embobiner_pipelines.php" />
 

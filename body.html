@@ -30,7 +30,7 @@
                              				            
 				         </div>
 				    </div>
-				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #GET{one_page}|oui}>
+				  <BOUCLE_principale_rubrique(RUBRIQUES){tout}{id_parent=0}{par num titre,titre}{si #GET{one_page}|et{#ENV{page}|non}|oui}>
 				  
 				    <div class="section[ (#COMPTEUR_BOUCLE|=={1}|?{sTop,s[(#COMPTEUR_BOUCLE|moins{1})]})]">
 				        

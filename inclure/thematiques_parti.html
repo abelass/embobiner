@@ -1,5 +1,3 @@
-
-
 <BOUCLE_partenaire(PARTENAIRES){id_partenaire}>
   [(#LOGO_PARTENAIRE|image_reduire{100})]
   <h2>#NOM</h2>
@@ -12,9 +10,7 @@
 					<BOUCLE_thematiques(ARTICLES partenaires_liens){id_partenaire}>
 					  <li>		
 						<BOUCLE_rub(RUBRIQUES){id_rubrique}>
-						  <a class="mediabox"  rel="article" href="[(#URL_PAGE{thematiques}
-								   |parametre_url{id_article,#ID_ARTICLE}
-								   |parametre_url{type,article})]" title="#TITRE"><h3 class="titre">#TITRE</h3>
+						  <a class="mediabox boxIframe boxWidth-1200px boxHeight-500px"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#TITRE"><h3 class="titre">#TITRE</h3>
 						  </a>		  
 						</BOUCLE_rub>		  
 					  </BOUCLE_parties>
