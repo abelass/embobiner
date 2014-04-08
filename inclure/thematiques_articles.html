@@ -7,7 +7,7 @@
 	<BOUCLE_thematiques(ARTICLES){id_rubrique}{tout}{par num titre,titre}>
 	  <li>
 	  <BOUCLE_parties(PARTENAIRES){id_article}{0,1}>
-		<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px" rel="parti" href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti}|parametre_url{var_zajax,content})]" title="#NOM">
+		<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px" rel="parti" href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti})]" title="#NOM">
 		[(#LOGO_PARTENAIRE|image_reduire{100})]
 		</a>
 	  </BOUCLE_parties>	
@@ -15,7 +15,7 @@
 		(#INTRODUCTION)
 		</div>]
 		<div class="action">
-    		<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article}|parametre_url{var_zajax,content})]" title="#NOM">
+    		<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#NOM">
                 [(#CHEMIN{css/images/more_down.png}|image_reduire{50})]
             </a>
         </div>
