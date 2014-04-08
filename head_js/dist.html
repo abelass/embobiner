@@ -1,0 +1,67 @@
+<script type="text/javascript">
+  $(document).ready( function() {
+	$('.subMenu').smint();
+	$(".scrollable").scrollable();
+	
+	
+	
+	//Initiate scrollable as normal
+	$(".scrollable").scrollable();
+	
+	// Call our responsive function
+	responsiveScrollable();
+	
+	// Call our responsive funtion every time the browser window is resized
+	$(window).resize(function() {
+	  responsiveScrollable();
+	});
+		
+	
+	function responsiveScrollable(){
+	  
+	  // Set width of scrollable slides to width of browser window
+	  var siteWidth = $(window).width();
+	  $('.scrollable .wrapper').css('width', siteWidth);
+	  
+	  // Set scrollable height to be proportional to the aspect ratio of the slide's content - eg if in your design the slide is 1000w x 500h, this ratio would be 2
+	  /* var bannerHeight = $(window).width() / 2;	
+	  $('.scrollable').css('height', bannerHeight);*/
+	  
+	  // Use the api to reposition the slide once it's been resized (if the broswer is resized)
+	  var api = $(".scrollable").data('scrollable');
+	  var currentSlide = api.getIndex();
+	  api.seekTo(currentSlide, 50);
+	  
+	}
+	
+    $(function(){
+    
+        var iFrames = $('iframe');
+      
+    	function iResize() {
+    	
+    		for (var i = 0, j = iFrames.length; i < j; i++) {
+    		  iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';}
+    	    }
+    	    
+        	if ($.browser.safari || $.browser.opera) { 
+        	
+        	   iFrames.load(function(){
+        	       setTimeout(iResize, 0);
+               });
+            
+        	   for (var i = 0, j = iFrames.length; i < j; i++) {
+        			var iSource = iFrames[i].src;
+        			iFrames[i].src = '';
+        			iFrames[i].src = iSource;
+               }
+               
+        	} else {
+        	   iFrames.load(function() { 
+        	       this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+        	   });
+        	}
+        
+        });		
+  }); 
+</script>

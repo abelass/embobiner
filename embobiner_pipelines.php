@@ -18,5 +18,9 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
  * sur des pipelines existants.
  */
 
-
+function embobiner_jquery_plugins($scripts){
+    if(_request('page')!='thematiques')$scripts[] = "javascript/smint/js/jquery.smint.js";
+    $scripts[] = "javascript/jquery.tools.min.js";	
+    return $scripts;
+}
 ?>

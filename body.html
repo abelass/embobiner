@@ -2,10 +2,7 @@
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 	<div class="page">
 		<div class="container">
-			<div class="header" id="header">
-				<INCLURE{fond=header/#ENV{type-page},env} />
-			</div>
-			[(#ENV{type-page}|=={video}|non)
+			[(#ENV{type-page}|in_array{#LISTE{video,thematiques}}|non)
 			[<div class="navbar navbar-inverse navbar-responsive" id="nav">
 				(#INCLURE{fond=inclure/nav,env})
 			</div>]]
@@ -49,9 +46,6 @@
                     </div>
 			  <//B_principale_rubrique>
 				</div>
-			</div>
-			<div class="footer" id="footer">
-		       <INCLURE{fond=footer/#ENV{type-page},env} />
 			</div>
 		</div>
 	</div>
