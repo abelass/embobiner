@@ -6,7 +6,7 @@
 				<ul class="menu thematiques">
 					<BOUCLE_thematiques(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}{par num titre,titre}>
 					  <li>
-					  	<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px"" rel="thematiques" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" title="#TITRE">#TITRE</a>
+					  	<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px" rel="thematiques" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" title="#TITRE">#TITRE</a>
 					 </li>
 	[(#COMPTEUR_BOUCLE|modulo{5}|=={0}|et{#TOTAL_BOUCLE|>{5}}|oui)
 				  </ul>  
