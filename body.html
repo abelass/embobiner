@@ -12,19 +12,20 @@
 				    <div class="section intro">
                         <div class="inner"> 
                             <header class="accueil clearfix">
-                                <h1 id="logo_site_spip "[ class="(#EDIT{meta-nom_site})"]>#NOM_SITE_SPIP
+                                <h1 id="logo_site_spip "[ class="(#EDIT{meta-nom_site})"]>#NOM_SITE_SPIP <br/>
+                                    #SLOGAN_SITE_SPIP
                                 </h1>
-                                [<div id="slogan_site_spip"[ class="(#EDIT{meta-slogan_site})"]>
-                                    (#SLOGAN_SITE_SPIP)
-                                 </div>]                            
+                           
                             </header>
                             <div [class="(#EDIT{meta-descriptif_site})"]>
                                      #DESCRIPTIF_SITE_SPIP 
                             </div>
-                            <nav class="nav">
+                            <nav class="nav_hor">
+                                 <h2>Thématiques</h2>
 				                <INCLURE{fond=inclure/thematiques,id_rubrique=1,env,ajax,}/>
 				            </nav> 
-				            <nav class="nav">
+				            <nav class="nav_hor">
+				                 <h2>Ce que les parties en disent</h2>
                                 <INCLURE{fond=inclure/parties,env,ajax,}/>
                             </nav>
                              				            

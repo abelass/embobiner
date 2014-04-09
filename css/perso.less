@@ -1,7 +1,23 @@
 @import "css/variables.less";
 @import "css/mixins.less";
 
+@font-face{ font-family: 'lobster'; src: url('fonts/lobster-webfont.eot'); src: url('fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/lobster-webfont.woff') format('woff'), url('fonts/lobster-webfont.ttf') format('truetype'), url('fonts/lobster-webfont.svg#webfont') format('svg'); }
 
+
+
+//Définitions générales
+body{
+  background:url('images/background.png')  #272a20 50% 0 no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+
+h1, .h1, .h1-like{
+  font-family: 'lobster', Arial, sans-serif;
+  font-size: 2.9em;
+  line-height: 1.2em;  
+  }
 
 /*Layout*/
 
@@ -11,19 +27,17 @@
 
 #nav{
   position:relative;
-  width:700px;
   text-align:center;
   margin:0 auto;
-  
+  width:36em;
+  font-family: 'lobster', Arial, sans-serif;
+  font-size:1.6em;
   .menu-items{width:100%}
+  li{margin: -1.2em 0.5em 0.5em;}
+  .logo{padding-top:1.2em}
   }
 
-//Background
-body{
-  background:url('images/background.png')  #272a20 50% 0 no-repeat;
-  background-size: cover;
-  background-attachment:fixed;
-}
+
 
 /*Menu*/
 .subMenu{
@@ -47,7 +61,7 @@ ul.menu {
 
 /*Les différentes blocs*/
 
- .section{min-height:400px}
+ .section{min-height:400px;clear:both;}
  
  .inner {
    background:#ffffff;padding: 1em 2.5em;
@@ -58,7 +72,26 @@ ul.menu {
   /*Intro*/
   .section.intro{
     margin-top:@navbarHeight;
-    .nav{clear:both}
+    color:white;
+    text-align:center;
+    .inner{background:transparent;}
+    .nav_hor{
+      
+      clear:both;
+      height:10em;
+      h2{
+        margin:0;
+        text-align:left;
+        font-size:1.2em
+        }
+      
+      ul{
+        background:#ffffff;
+        height:5em;
+        margin-left: 0;
+        }
+      }
+     
     }
   
   /*Video*/

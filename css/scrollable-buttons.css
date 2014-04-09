@@ -5,18 +5,21 @@
 a.browse {
 	display:block;
 	width:30px;
-	height:60px;
-	position:absolute
+	height:30px;
+	position:absolute;
 	cursor:pointer;
 	font-size:1px;
-   	top:0
+   	top:15px;
 }
 
+a.browse:focus,a.browse:active,a.browse:hover {
+	background:transparent
+}
 
 /* disabled navigational button */
-a.disabled {
-	visibility:hidden !important;		
+a.disabled img{
+	opacity:0.2 !important;		
 } 	
 
-.next{right:0;	background:url(images/arrow-right.png) no-repeat;}
-.prev{left:0;background:url(images/arrow-left.png) no-repeat;}
+.next{right:-30px;}
+.prev{left:-30px;}
