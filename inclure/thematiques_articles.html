@@ -1,15 +1,17 @@
 <B_thematiques>
   	<BOUCLE_rub(RUBRIQUES){id_rubrique}>
 	  <h2>#TITRE</h2>
-	  [<div class="texte">(#THEME_PARTI)</div>]
+	  [<div class="descriptif">(#THEME_PARTI)</div>]
   </BOUCLE_rub>
   <ul id="thematiques_articles" class="menu thematiques_articles">
 	<BOUCLE_thematiques(ARTICLES){id_rubrique}{tout}{par num titre,titre}>
 	  <li>
 	  <BOUCLE_parties(PARTENAIRES){id_article}{0,1}{par nom}>
+	  <div class="logos">
 		<a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-500px" rel="parti" href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti})]" title="#NOM">
 		[(#LOGO_PARTENAIRE|image_reduire{100})]
 		</a>
+	   </div>
 	  </BOUCLE_parties>	
 		[<div class="texte">
 		(#INTRODUCTION)
