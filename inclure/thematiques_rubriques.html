@@ -1,0 +1,16 @@
+<ul class="menu items rub_themes">
+<BOUCLE_rubriques(RUBRIQUES){id_parent=#ID_RUBRIQUE}{par num titre,titre}{tout}>
+	<li class="item[ (#COMPTEUR_BOUCLE|alterner{left,right})]">
+		<h3>
+			[(#LOGO_RUBRIQUE|image_reduire{50})]<br/>
+			#TITRE
+		</h3>
+		[(#ENV{voir}|!={#ID_RUBRIQUE}|?{
+			<div class="#EDIT{descriptif} descriptif">#DESCRIPTIF</div>
+			<div class="more"><a class="ajax" href="[(#SELF|parametre_url{voir,#ID_RUBRIQUE})]">En Savoir plus</a></div>,
+			<div class="#EDIT{texte} texte">#TEXTE</div>
+		})]
+	</li>
+</BOUCLE_rubriques>
+</ul>
+<br class="clear"/>
