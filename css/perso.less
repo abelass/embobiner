@@ -19,6 +19,16 @@ h1, .h1, .h1-like{
   line-height: 1.2em;  
   }
 
+h2,.h2{
+  font-family: 'lobster', Arial, sans-serif;
+  color:#545a43;
+  font-size:3.2em;}
+  
+h3,.h3{
+  text-align:center;
+  border-bottom:4px #828b67 solid;
+  
+  }  
 /*Layout*/
 
 .row,.span8 {
@@ -74,6 +84,7 @@ ul.menu {
     margin-top:@navbarHeight;
     color:white;
     text-align:center;
+    a{color:#000000}
     .inner{background:transparent;}
     .descriptif_site{width:60%; margin:0 auto;}
     .nav_hor{
@@ -81,6 +92,8 @@ ul.menu {
       clear:both;
       height:10em;
       h2{
+        font-family:@sansFontFamily; 
+        color:#ffffff;
         font-size: 1.6em;
         margin: 0 0 -4px;
         text-align: left;
@@ -105,7 +118,20 @@ ul.menu {
   
 /*Thématiques*/
 .section.thematiques{
-  li{width:47%}
+  ul{
+    overflow:hidden;
+    margin:0;
+    }
+  li{
+    width:45%;
+    font-size:90%;
+    margin:0;
+    .left{margin-right:2%}
+    .right{margin-left:2%}    
+    }
+    
+   .texte{font-size:90%}
+    
 }
 /*Les modalboxes*/
 .modalbox {

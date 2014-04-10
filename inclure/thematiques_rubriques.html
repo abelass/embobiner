@@ -1,6 +1,6 @@
 <ul class="menu items rub_themes">
 <BOUCLE_rubriques(RUBRIQUES){id_parent=#ID_RUBRIQUE}{par num titre,titre}{tout}>
-	<li class="item">
+	<li class="item[ (#COMPTEUR_BOUCLE|alterner{left,right})]">
 		<h3>
 			[(#LOGO_RUBRIQUE|image_reduire{50})]<br/>
 			#TITRE
