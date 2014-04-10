@@ -5,11 +5,11 @@
 			[(#LOGO_RUBRIQUE|image_reduire{50})]<br/>
 			#TITRE
 		</h3>
-		[(#ENV{voir}|!={#ID_RUBRIQUE}|?{
-			<div class="#EDIT{descriptif} descriptif">#DESCRIPTIF</div>
-			<div class="more"><a class="ajax" href="[(#SELF|parametre_url{voir,#ID_RUBRIQUE})]">En Savoir plus</a></div>,
-			<div class="#EDIT{texte} texte">#TEXTE</div>
-		})]
+		<div class="descriptif">
+                #DESCRIPTIF*
+                [(#ENV{voir}|!={#ID_RUBRIQUE}|oui)<span class="more"><a class="ajax" href="[(#SELF|parametre_url{voir,#ID_RUBRIQUE})]">En savoir plus</a></span>]
+            </div>
+		[(#ENV{voir}|!={#ID_RUBRIQUE}|non)<div class="#EDIT{texte} texte">#TEXTE</div>]
 	</li>
 </BOUCLE_rubriques>
 </ul>
