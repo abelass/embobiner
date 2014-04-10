@@ -1,5 +1,5 @@
 <BOUCLE_thematiques(ARTICLES){id_article}>
-  <BOUCLE_partenaire(PARTENAIRES){id_article}>
+  <BOUCLE_partenaire(PARTENAIRES){id_article}{par nom}>
 	<a class="mediabox boxIframe boxWidth-1200px boxHeight-500px" rel="parti" href="[(#URL_PAGE{thematiques}
 			 |parametre_url{id_partenaire,#ID_PARTENAIRE}
 			 |parametre_url{type,parti})]" title="#NOM">
