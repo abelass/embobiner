@@ -2,7 +2,7 @@
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 	<div class="page">
 		<div class="container">
-			[(#ENV{type-page}|in_array{#LISTE{video,thematiques}}|non)
+			[(#ENV{type-page}|in_array{#LISTE{video,thematiques,login}}|non)
 			[<div class="navbar navbar-inverse navbar-responsive" id="nav">
 				(#INCLURE{fond=inclure/nav,env})
 			</div>]]
