@@ -155,26 +155,13 @@ ul.menu {
 
 .thematiques body{
   background:none #ffffff;
+  text-align:center;  
+
   
   
-  .modalbox.articles{
-    text-align:center;
-    a.browse {
-      top:80px;
-      }
-    }
-  .modalbox.article{
-    strong{color:@linkColor};
-    }
 
   .texte{  line-height:normal;}
-  
-  .modalboox.articles{text-align:center;}
-  .modalbox.article{
-    .texte {
-      strong{color:@linkColor;}
-      }
-    }  
+
   div.logos{height:6.5em}
   .container{width:100%;}
   h1,.h1{
@@ -183,17 +170,36 @@ ul.menu {
     display: inline-block;
     margin :0 auto; 
     margin-bottom:0.5em;
-    padding-bottom:0.1em
+    padding-bottom:0.1em;
     }  
   .section.thematiques{
     .descriptif{font-size:1.2em;}
-    li {
-    font-size: 83%;
-    width: @column;
-    margin: 0 auto 0.4em 0;
-    padding: 1em 0.7em;    
+      li {
+      font-size: 83%;
+      width: @column;
+      margin: 0 auto 0.4em 0;
+      padding: 1em 0.7em;    
+      }
     }
-    
-  } 
+  .modalbox.articles{
+    .descriptif,.texte{text-align:center}
+    a.browse {
+      top:80px;
+      }
+    }
+  .modalbox.article{
+    .texte{text-align:left}
+    strong{color:@linkColor};
+     .texte {
+      strong{color:@linkColor;}
+      }
+    }
+  .modalbox.parti{
+    .themes{position:relative;}
+    .scrollable{height:23em}
+    .texte{font-size:100%}
+    li{width:17.5%}
+    .titre a{color:#000000}
+    } 
   }
 
