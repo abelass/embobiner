@@ -1,5 +1,6 @@
 <B_thematiques>
   	<BOUCLE_rub(RUBRIQUES){id_rubrique}>
+  	  [<div class="logo">(#LOGO_RUBRIQUE|image_reduire{200})</div>]
 	  <h1>#TITRE</h1>
       <BOUCLE_rubriques(ARTICLES){id_parent=1}{par num titre,titre}>
         [(#GET{rub_actuel}|non|et{#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non})#SET{rub_prec,#ID_RUBRIQUE}]
