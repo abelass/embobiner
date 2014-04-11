@@ -16,7 +16,7 @@ h1, .h1, .h1-like{
   font-family: 'lobster', Arial, sans-serif;
   font-size: 4.5em;
   line-height: 1.2em; 
-  margin-top:1.5em; 
+  margin-top:0.5em; 
 
   }
 
@@ -48,7 +48,7 @@ h3,.h3{
   font-family: 'lobster', Arial, sans-serif;
   font-size:1.6em;
   .menu-items{width:100%}
-  li{margin: -1.2em 0.5em 0.5em;}
+  li{margin: -1.2em 0.1em 0.1em;}
   .logo{padding-top:1.2em}
   }
 
@@ -57,7 +57,7 @@ h3,.h3{
 /*Menu*/
 .subMenu{
   width: 100%;
-  position: fixed;
+  position: relative !important;
   top: 0px;
   z-index: 1000;
   }
@@ -140,7 +140,8 @@ ul.menu {
       img{margin-bottom:0.5em}
       }
    .texte{font-size:90%}
-    
+   .left{clear:left}
+   .right{clear:right}
 }
 /*Les modalboxes*/
 .modalbox {
@@ -153,14 +154,24 @@ ul.menu {
 
 .thematiques body{
   background-image:none ;
+<<<<<<< HEAD
   .modalbox.articles{text-align:center;}
   .modalbox.article{
     strong{color:@linkColor};
     }
+=======
+>>>>>>> 1724686ed2b4fba4c42d4a5a157a83c397d794ab
   .texte{  line-height:normal;}
+  
+  .modalboox.articles{text-align:center;}
+  .modalbox.article{
+    .texte {
+      strong{color:@linkColor;}
+      }
+    }  
   div.logos{height:6.5em}
   .container{width:100%;}
-  h2,.h2{
+  h1,.h1{
     border-bottom:0.071em @linkColor solid;
     display: inline-block;
     margin :0 auto; 
@@ -168,7 +179,7 @@ ul.menu {
     padding-bottom:0.1em
     }  
   .section.thematiques{
-    .descriptiif{font-size:1.2em;}
+    .descriptif{font-size:1.2em;}
     li {
     font-size: 83%;
     width: @column;

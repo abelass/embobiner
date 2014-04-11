@@ -1,8 +1,9 @@
 <BOUCLE_partenaire(PARTENAIRES){id_partenaire}>
   [(#LOGO_PARTENAIRE|image_reduire{100})]
-  <h2>#NOM</h2>
+  <h1>#NOM</h1>
+  <div class="descriptif">#DESCRIPTIF</div>
 <B_thematiques>
-<a class="prev browse left"></a>
+<a class="prev browse left">[(#CHEMIN{images/arrow-left.png}|image_reduire{30}|inserer_attribut{alt,fleche gauche})]</a>
 <div class="scrollable">  
 	   <div class="items">
 	   		<div class="wrapper"> 
@@ -17,7 +18,8 @@
 						[<div class="texte">(#INTRODUCTION)</div>]
 					  </li>
 	[(#COMPTEUR_BOUCLE|modulo{5}|=={0}|et{#TOTAL_BOUCLE|>{5}}|oui)
-				  </ul>  
+				  </ul>
+				  <br class="clear"/>  
 			  </div>      
 		<div class="wrapper">
 			    <ul class="menu thematiques_parti">]					  
@@ -26,6 +28,7 @@
 			</div>		
   		</div>
 </div>
-<a class="next browse right"></a>    				  
+<a class="next browse right">[(#CHEMIN{images/arrow-right.png}|image_reduire{30}|inserer_attribut{alt,fleche droite})]</a>   				  
 </B_thematiques>
 </BOUCLE_partenaire>
+
