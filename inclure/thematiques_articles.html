@@ -1,6 +1,14 @@
 <B_thematiques>
   	<BOUCLE_rub(RUBRIQUES){id_rubrique}>
 	  <h1>#TITRE</h1>
+      <BOUCLE_rubriques(ARTICLES){id_parent=1}{par num titre,titre}>
+        [(#GET{rub_actuel}|non|et{#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non})#SET{rub_prec,#ID_RUBRIQUE}]
+        [(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|oui)#SET{rub_actuel,#ID_RUBRIQUE}]
+        [(#GET{rub_post}|non|et{#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non}|et{#GET{rub_prec}|!={#ID_RUBRIQUE}|oui})#SET{rub_post,#ID_RUBRIQUE}]      
+      </BOUCLE_rubriques>
+     <a href="[(#SELF|parametre_url{id_rubrique,#GET{rub_prec}})]" class="prev browse left ajax[ (#GET{rub_prec}|non)disabled]">[(#CHEMIN{images/arrow-left.png}|image_reduire{150}|inserer_attribut{alt,fleche gauche})]</a>
+      <a href="[(#SELF|parametre_url{id_rubrique,#GET{rub_post}})]" class="next browse right ajax[ (#GET{rub_post}|non)disabled]">[(#CHEMIN{images/arrow-right.png}|image_reduire{150}|inserer_attribut{alt,fleche droite})]</a>            
+      </B_rubriques>      
 	  [<div class="descriptif">(#THEME_PARTI)</div>]
   </BOUCLE_rub>
   <ul id="thematiques_articles" class="menu thematiques_articles">
@@ -8,7 +16,7 @@
 	  <li>
 	  <BOUCLE_parties(PARTENAIRES){id_article}{0,1}{par nom}>
 	  <div class="logos">
-		<a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px" rel="parti" href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti})]" title="#NOM">
+		<a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px"  href="[(#URL_PAGE{thematiques}|parametre_url{id_partenaire,#ID_PARTENAIRE}|parametre_url{type,parti})]" title="#NOM">
 		[(#LOGO_PARTENAIRE|image_reduire{100})]
 		</a>
 	   </div>
@@ -17,7 +25,7 @@
 		(#INTRODUCTION)
 		</div>]
 		<div class="action">
-    		<a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#NOM">
+    		<a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px"   href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#NOM">
                 [(#CHEMIN{css/images/more_down.png}|image_reduire{50})]
             </a>
         </div>

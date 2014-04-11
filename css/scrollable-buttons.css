@@ -13,9 +13,11 @@ a.browse {
 }
 
 a.browse:focus,a.browse:active,a.browse:hover {
-	background:transparent
+	background:transparent;
 }
-
+a.browse:focus,a.browse:active {
+	opacity:0.2 !important;	
+}
 /* disabled navigational button */
 a.disabled img{
 	opacity:0.2 !important;		
