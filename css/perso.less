@@ -188,11 +188,23 @@ ul.menu {
       }
     }
   .modalbox.article{
-    .texte{text-align:left}
-    strong{color:@linkColor};
-     .texte {
-      strong{color:@linkColor;}
+    .texte{
+      text-align:left;
+      -moz-column-count: 2;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px;      
       }
+
+     .texte {
+        strong{
+          color:@linkColor;
+          display:block;
+          margin-bottom: -0.9em;
+          }
+        }
     }
   .modalbox.parti{
     .themes{position:relative;}
