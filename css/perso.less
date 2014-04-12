@@ -32,8 +32,7 @@ h3,.h3,th{
   border-bottom:0.35em @linkColor solid;
   
   } 
-tabel{  border-collapse: separate;
-  border-spacing: 1em 0.5em;}  
+
   
 .more{font-size:0.75em;font-weight:bold} 
 /*Layout*/
@@ -183,8 +182,18 @@ ul.menu {
 
 /*Baromètre*/
 table.spip th, table.spip td {width:50%}
-.rubrique-texte-3 td br{clear:left}
-
+.rubrique-texte-3 {
+  td {
+    br{clear:left}
+    }
+  table{  
+    border-collapse: separate;
+    border-spacing: 12px}  
+  }
+table.spip th, table.spip td {border-top:none;}
+table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1) > th {
+    background-color: transparent;
+}
 /*les iframes*/
 .modalbox {
   background:#ffffff;  padding:1em 3.5em;
