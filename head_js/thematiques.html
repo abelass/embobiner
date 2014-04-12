@@ -1,22 +1,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
-       
-    /*$('a.mediabox').click(function (event) {
-        var rel=$(this).attr('rel');
-                
-     event.preventDefault(); // this just cancels the default link behavior.
-     parent.showColorBox($(this).attr("href"),rel); //this makes the parent window load the showColorBox function, using the a.colorbox href value
-    });*/
-        
+       /*Adapte la taille de la colorboux `l'ecran*/
 		jQuery(window).bind("load", function() {
 			var frameWidth = jQuery(document).width();
 			var frameHeight = jQuery(document).height() + 20;
 			parent.$.fn.colorbox.myResize(frameWidth, frameHeight);
-
 		});
-
 	});
-/*function showColorBox(imageURL) {
- $.fn.mediabox({iframe: true, innerWidth: "1200px", innerHeight: "1200px", href: imageURL, rel:true  });
-}*/
 </script>
