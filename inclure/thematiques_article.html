@@ -1,5 +1,6 @@
 <BOUCLE_thematiques(ARTICLES){id_article}>
-  <BOUCLE_partenaire(PARTENAIRES){id_article}{par nom}>
+  <BOUCLE_partenaire(PARTENAIRES){id_article}{0,1}>
+  #SET{id_partenaire,#ID_PARTENAIRE}
     <div clss="logo">
     	<a class="ajax"  href="[(#URL_PAGE{thematiques}
     			 |parametre_url{id_partenaire,#ID_PARTENAIRE}
@@ -15,5 +16,25 @@
 	</a>
 	</h1>
   </BOUCLE_rub>
+
+       #SET{prec,#ARRAY} #SET{post,#ARRAY}      
+      <BOUCLE_articles(ARTICLES partenaires_liens){id_partenaire=#GET{id_partenaire}}{par num titre,titre}>
+        [(#GET{art_actuel}|non|et{#ENV{id_article}|=={#ID_ARTICLE}|non})
+            [(#SET{prec,#GET{prec}|array_merge{#ARRAY{#COMPTEUR_BOUCLE,#LISTE{#ID_ARTICLE,#ID_RUBRIQUE}}}})]
+            #SET{art_prec,#ID_ARTICLE}
+            ]
+        [(#ENV{id_article}|=={#ID_ARTICLE}|oui)#SET{art_actuel,#ARRAY{#ID_ARTICLE,#ID_RUBRIQUE}}]
+        [(#GET{art_post}|non|et{#ENV{id_article}|=={#ID_ARTICLE}|non}|et{#GET{art_prec}|!={#ID_ARTICLE}|oui})
+            [(#SET{post,#GET{post}|array_merge{#ARRAY{#COMPTEUR_BOUCLE,#LISTE{#ID_ARTICLE,#ID_RUBRIQUE}}}})]
+            #SET{art_post,#ID_ARTICLE}
+            ]      
+      </BOUCLE_articles>
+
+     <a href="[(#SELF|parametre_url{id_article,#GET{art_prec}})]" class="prev browse left ajax[ (#GET{art_prec}|non)disabled]">[(#CHEMIN{images/arrow-left.png}|image_reduire{150}|inserer_attribut{alt,fleche gauche})]</a>
+      <a href="[(#SELF|parametre_url{id_article,#GET{art_post}})]" class="next browse right ajax[ (#GET{art_post}|non)disabled]">[(#CHEMIN{images/arrow-right.png}|image_reduire{150}|inserer_attribut{alt,fleche droite})]</a>            
+      </B_rubriques>    
   [<div class="texte">(#TEXTE)</div>]  
 </BOUCLE_thematiques>
+
+
+        
