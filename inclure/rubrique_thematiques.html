@@ -9,7 +9,9 @@
                 #DESCRIPTIF*
                 [(#ENV{voir}|!={#ID_RUBRIQUE}|oui)<span class="more"><a class="ajax" href="[(#SELF|parametre_url{voir,#ID_RUBRIQUE})]">En savoir plus</a></span>]
             </div>
-		[(#ENV{voir}|!={#ID_RUBRIQUE}|non)<div class="#EDIT{texte} texte">#TEXTE</div>]
+		[(#ENV{voir}|!={#ID_RUBRIQUE}|non)<div class="#EDIT{texte} texte">#TEXTE
+        <span class="more"><a class="ajax" href="[(#SELF|parametre_url{voir,''})]">Fermer</a></span>		    
+		   </div>]
 	</li>
 </BOUCLE_rubriques>
 </ul>

@@ -3,7 +3,7 @@
 
 @font-face{ font-family: 'lobster'; src: url('fonts/lobster-webfont.eot'); src: url('fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/lobster-webfont.woff') format('woff'), url('fonts/lobster-webfont.ttf') format('truetype'), url('fonts/lobster-webfont.svg#webfont') format('svg'); }
 
-@column:14.5%;
+@column:12.5%;
 
 //Définitions générales
 body{
@@ -38,21 +38,50 @@ h3,.h3{
 
 .row,.span8 {
     width: 100%;
+    margin:0;
+    text-align:center;
 }
 
 #nav{
-  position:relative;
+ overflow:hidden;
+   position:relative;
+  float:left;
+   width:100%;   
   text-align:center;
-  margin:0 auto;
-  width:36em;
   font-family: 'lobster', Arial, sans-serif;
   font-size:1.6em;
-  .menu-items{width:100%}
+  .menu-items{margin:0 auto;}
   li{margin: -1.2em 0.1em 0.1em;}
-  .logo{padding-top:1.2em}
+  .logo{padding-top:-1.2em;width:7em}
   }
 
+#nav ul{
+    clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+   li{
+    display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+   width:9em
+   }
+}
 
+.navbar .nav{margin:0}
+
+.navbar .nav > li > a {
+    padding: 0s;
+
+}
 
 /*Menu*/
 .subMenu{
@@ -68,7 +97,6 @@ ul.menu {
   }
 }
 
-.navbar-inverse .nav > li > a.active{color:red;font-weight:bold}
 
 .navbar-inner {
   box-shadow:none;
@@ -76,11 +104,15 @@ ul.menu {
 
 /*Les différentes blocs*/
 
- .section{min-height:400px;clear:both;}
+ .section{
+   margin-bottom:1em;
+   clear:both;
+   }
  
  .inner {
    background:#ffffff;padding: 1em 2.5em;
-   .menu li{width:@column}
+   .menu li{
+     width:@column}
    }
 
 
@@ -93,10 +125,12 @@ ul.menu {
     a{color:#000000}
     .inner{background:transparent;}
     .nav_hor{
-      
+      width: 85%;
       clear:both;
       height:10em;
-      h2{
+      margin:0 auto;
+
+   h2{
         font-family:@sansFontFamily; 
         color:#ffffff;
         font-size: 1.6em;
@@ -161,7 +195,10 @@ ul.menu {
   .inner{
     background:transparent;
     padding:2.5em}
-  .logo img{position:absolute;top:-35px}
+  .logo {
+    text-align:center;
+    img{position:absolute;top:-35px}
+    }
   
 
   .texte{  line-height:normal;}
