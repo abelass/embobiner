@@ -13,15 +13,15 @@
     					<BOUCLE_thematiques(ARTICLES partenaires_liens){id_partenaire}>
     					  <li>		
     						<BOUCLE_rub(RUBRIQUES){id_rubrique}>
-    						  [<a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#TITRE">(#LOGO_RUBRIQUE|image_reduire{50})</a>]
+    						  [<a class="ajax"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#TITRE">(#LOGO_RUBRIQUE|image_reduire{50})</a>]
     						  <div class="titre">
-    						     <a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#TITRE">#TITRE</a>  
+    						     <a class="ajax"  rel="article" href="[(#URL_PAGE{thematiques}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{type,article})]" title="#TITRE">#TITRE</a>  
                               </div>
 	      						</BOUCLE_rub>		  
     					  </BOUCLE_parties>
     						[<div class="texte">(#INTRODUCTION)</div>]
     						      <div class="action">
-                                        <a class="mediabox boxIframe iframe boxWidth-1200px boxHeight-1200px"   href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE}|parametre_url{type,articles})]" title="#NOM">
+                                        <a class="ajax"   href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE}|parametre_url{type,articles})]" title="#NOM">
                                             [(#CHEMIN{css/images/more_down.png}|image_reduire{50}|inserer_attribut{alt,fleche bas})]
                                         </a>
                                  </div>
@@ -42,3 +42,34 @@
 </B_thematiques>
 </BOUCLE_partenaire>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+         //Initiate scrollable as normal
+        $(".scrollable").scrollable();
+
+        // Tesponsive scriollable -> Call our responsive function
+        responsiveScrollable();
+
+        // Call our responsive funtion every time the browser window is resized
+        $(window).resize(function() {
+            responsiveScrollable();
+        });
+
+        function responsiveScrollable() {
+
+            // Set width of scrollable slides to width of browser window
+            var siteWidth = $(window).width();
+            $('.scrollable .wrapper').css('width', siteWidth);
+
+            // Set scrollable height to be proportional to the aspect ratio of the slide's content - eg if in your design the slide is 1000w x 500h, this ratio would be 2
+            /* var bannerHeight = $(window).width() / 2;
+            $('.scrollable').css('height', bannerHeight);*/
+
+            // Use the api to reposition the slide once it's been resized (if the broswer is resized)
+            var api = $(".scrollable").data('scrollable');
+            var currentSlide = api.getIndex();
+            api.seekTo(currentSlide, 50);
+
+        }
+    });
+</script>

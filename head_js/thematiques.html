@@ -1,41 +1,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
        
-    $('a.mediabox').click(function (event) {
+    /*$('a.mediabox').click(function (event) {
         var rel=$(this).attr('rel');
                 
      event.preventDefault(); // this just cancels the default link behavior.
      parent.showColorBox($(this).attr("href"),rel); //this makes the parent window load the showColorBox function, using the a.colorbox href value
-    });
-
-
-		//Initiate scrollable as normal
-		$(".scrollable").scrollable();
-
-		// Tesponsive scriollable -> Call our responsive function
-		responsiveScrollable();
-
-		// Call our responsive funtion every time the browser window is resized
-		$(window).resize(function() {
-			responsiveScrollable();
-		});
-
-		function responsiveScrollable() {
-
-			// Set width of scrollable slides to width of browser window
-			var siteWidth = $(window).width();
-			$('.scrollable .wrapper').css('width', siteWidth);
-
-			// Set scrollable height to be proportional to the aspect ratio of the slide's content - eg if in your design the slide is 1000w x 500h, this ratio would be 2
-			/* var bannerHeight = $(window).width() / 2;
-			$('.scrollable').css('height', bannerHeight);*/
-
-			// Use the api to reposition the slide once it's been resized (if the broswer is resized)
-			var api = $(".scrollable").data('scrollable');
-			var currentSlide = api.getIndex();
-			api.seekTo(currentSlide, 50);
-
-		}
+    });*/
         
 		jQuery(window).bind("load", function() {
 			var frameWidth = jQuery(document).width();
@@ -45,7 +16,7 @@
 		});
 
 	});
-function showColorBox(imageURL) {
+/*function showColorBox(imageURL) {
  $.fn.mediabox({iframe: true, innerWidth: "1200px", innerHeight: "1200px", href: imageURL, rel:true  });
-}
+}*/
 </script>

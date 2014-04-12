@@ -23,5 +23,5 @@ a.disabled img{
 	opacity:0.2 !important;		
 } 	
 
-.next{right:-30px;}
-.prev{left:-30px;}
+.next{right:-35em;}
+.prev{left:-35em;}

@@ -1,7 +1,7 @@
 <BOUCLE_thematiques(ARTICLES){id_article}>
   <BOUCLE_partenaire(PARTENAIRES){id_article}{par nom}>
     <div clss="logo">
-    	<a class="mediabox boxIframe boxWidth-1200px boxHeight-1200px" rel="parti" href="[(#URL_PAGE{thematiques}
+    	<a class="ajax"  href="[(#URL_PAGE{thematiques}
     			 |parametre_url{id_partenaire,#ID_PARTENAIRE}
     			 |parametre_url{type,parti})]" title="#NOM">
     	  [(#LOGO_PARTENAIRE|image_reduire{100})]
@@ -10,7 +10,7 @@
   </BOUCLE_partenaire>	
   <BOUCLE_rub(RUBRIQUES){id_rubrique}>
 	<h1 class="titre">
-	<a class="mediabox  boxIframe boxWidth-1200px boxHeight-1200px" rel="articles" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE}|parametre_url{type,articles})]" title="#TITRE">
+	<a class="ajax" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE}|parametre_url{type,articles})]" title="#TITRE">
 	  #TITRE
 	</a>
 	</h1>

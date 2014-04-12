@@ -124,6 +124,7 @@ ul.menu {
   
 /*Thématiques*/
 .section.thematiques{
+
   .main{font-size:1.5em;}
   .descriptif{margin-bottom:1.2em;}
   ul{
@@ -144,20 +145,23 @@ ul.menu {
    .left{clear:left}
    .right{clear:right}
 }
-/*Les modalboxes*/
+
+/*les iframes*/
 .modalbox {
+  background:#ffffff;  padding:1em 3.5em;
   .action{text-align:center;}  
 }
 
 .nav{position:relative}
 
-/*les iframes*/
 
 .thematiques body{
-  background:none #ffffff;
+  background:none transparent;
   text-align:center;  
-
-  
+  .inner{
+    background:transparent;
+    padding:2.5em}
+  .logo img{position:absolute;top:-35px}
   
 
   .texte{  line-height:normal;}
@@ -168,13 +172,12 @@ ul.menu {
     color:@linkColor;
     border-bottom:0.071em @linkColor solid;
     display: inline-block;
-    margin :0 auto; 
-    margin-bottom:0.5em;
+    margin :0.1em auto 0.5em auto; 
     padding-bottom:0.1em;
     }  
   .section.thematiques{
     .descriptif{font-size:1.2em;}
-      li {
+    li {
       font-size: 83%;
       width: @column;
       margin: 0 auto 0.4em 0;
@@ -210,7 +213,11 @@ ul.menu {
     .themes{position:relative;}
     .scrollable{height:23em}
     .texte{font-size:100%}
-    li{width:17.5%}
+     li{
+      width:16.5%;
+      padding:0;
+      margin: 0 0.2%;
+    }
     .titre a{color:#000000}
     } 
   }
