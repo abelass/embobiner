@@ -1,7 +1,8 @@
 <BOUCLE_thematiques(ARTICLES){id_article}>
+
   <BOUCLE_partenaire(PARTENAIRES){id_article}{0,1}>
   #SET{id_partenaire,#ID_PARTENAIRE}
-    <div clss="logo">
+    <div class="logo">
     	<a class="ajax"  href="[(#URL_PAGE{thematiques}
     			 |parametre_url{id_partenaire,#ID_PARTENAIRE}
     			 |parametre_url{type,parti})]" title="#NOM">
@@ -10,6 +11,7 @@
     </div>
   </BOUCLE_partenaire>	
   <BOUCLE_rub(RUBRIQUES){id_rubrique}>
+    
 	<h1 class="titre">
 	<a class="ajax" href="[(#URL_PAGE{thematiques}|parametre_url{id_rubrique,#ID_RUBRIQUE}|parametre_url{type,articles})]" title="#TITRE">
 	  #TITRE
@@ -32,7 +34,8 @@
 
      <a href="[(#SELF|parametre_url{id_article,#GET{art_prec}})]" class="prev browse left ajax[ (#GET{art_prec}|non)disabled]">[(#CHEMIN{images/arrow-left.png}|image_reduire{150}|inserer_attribut{alt,fleche gauche})]</a>
       <a href="[(#SELF|parametre_url{id_article,#GET{art_post}})]" class="next browse right ajax[ (#GET{art_post}|non)disabled]">[(#CHEMIN{images/arrow-right.png}|image_reduire{150}|inserer_attribut{alt,fleche droite})]</a>            
-      </B_rubriques>    
+      </B_rubriques> 
+  [<div class="chapo">(#CHAPO)</div>]         
   [<div class="texte">(#TEXTE)</div>]  
 </BOUCLE_thematiques>
 

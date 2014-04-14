@@ -283,7 +283,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     font-size:4.3em;
     }  
   .section.thematiques{
-    .descriptif{font-size:1.1em;}
+    .descriptif,.chapo{font-size:1.1em;font-weight:normal}
     li {
       font-size: 2em;
       width: @column;
@@ -304,6 +304,14 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     .prev{left:4em;}      
     }
   .modalbox.article{
+     h1{
+        //font-family:@sansFontFamily;
+        //font-size:1em;
+        //font-weight:bold;
+        img{margin-bottom:0.2em;}
+        a{color:@titleColor;}
+        
+        }     
     .texte{
       text-align:left;
       -moz-column-count: 2;
@@ -311,16 +319,14 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       -webkit-column-count: 2;
       -webkit-column-gap: 20px;
       column-count: 2;
-      column-gap: 20px;      
-      }
-
-     .texte {
+      column-gap: 20px; 
         strong{
           color:@linkColor;
           display:block;
           margin-bottom: -0.9em;
-          }
-        }
+          font-weight:normal;
+          }          
+      }
     }
   .modalbox.parti{
     .themes{position:relative;}
