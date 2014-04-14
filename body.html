@@ -1,7 +1,5 @@
 [(#ENV{id_rubrique}|ou{#ENV{id_article}}|oui)#SET{one_page,oui}]
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
-	[(#REM) Boite à outils]
-    [(#INCLURE{fond=inclure/outils_embobiner,env})] 
 	<div class="page">
 		<div class="container">
 			[(#ENV{type-page}|in_array{#LISTE{video,thematiques,login}}|non)
@@ -11,6 +9,8 @@
 			<div class="row">    
 				<div class="content span8 " id="content">
 				 <B_principale_rubrique>
+				 	[(#REM) Boite à outils]
+    [(#INCLURE{fond=inclure/outils_embobiner,env})] 
 				    <div class="section intro">
                         <div class="inner">
                             <header class="accueil clearfix">
