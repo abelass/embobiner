@@ -7,8 +7,12 @@
 
 //Définitions générales
 body{
-  background:url('images/background.png')  #272a20 50% 0 no-repeat;
-  background-size: cover;
+  background-color:  #272a20;
+  background:url('images/background.png')  #272a20 50% 0 no-repeat;  
+  background-image: url("images/elections.png"), url('images/background.png'); 
+  background-position:  0 0,50% 0;
+  background-repeat: no-repeat;
+  background-size: auto,auto;
   background-attachment:fixed;
 }
 
@@ -16,7 +20,8 @@ h1, .h1, .h1-like{
   font-family: 'lobster', Arial, sans-serif;
   font-size: 4.5em;
   line-height: 1.2em; 
-  margin-top:0.5em; 
+  margin-top:0; 
+  margin-bottom: 0.414286em;
   font-weight:normal;
   }
 
@@ -66,6 +71,7 @@ h3,.h3,th{
     margin:0;
 }
 
+/*Menu horizontal*/
 #nav{
  overflow:hidden;
    position:relative;
@@ -73,11 +79,11 @@ h3,.h3,th{
    width:100%;   
   text-align:center;
   font-family: 'lobster', Arial, sans-serif;
-  font-size:1.6em;
+  font-size:1.4em;
   font-weight:normal;
   .menu-items{margin:0 auto;}
   li{margin: -1.2em 0.1em 0.1em;}
-  .logo{padding-top:-1.2em;width:7em}
+  .logo{padding:0 0.5em;width:7em}
   }
 
 #nav ul{
@@ -97,18 +103,18 @@ h3,.h3,th{
    padding:0;
    position:relative;
    right:50%;
-   width:9em
+   width:8em
    }
 }
 
 .navbar .nav{margin:0}
 
 .navbar .nav > li > a {
-    padding: 0s;
+    padding: 55px 0;
 
 }
 
-/*Menu*/
+
 .subMenu{
   width: 100%;
   position: relative !important;
@@ -139,20 +145,21 @@ ul.menu {
  .inner {
    background:#ffffff;padding: 1em 2.5em;
    .menu li{
-     width:@column}
+     width:@column;
+     line-height: 1.2em;}
    .nav_hor.parties{
      li{width:14.7%;}
      
-   }
+    }
    }
 
 
   /*Intro*/
   .section.intro{
-    margin-top:@navbarHeight;
+    margin-top:112px;
     color:white;
     text-align:center;
-    .descriptif_site{width:50%;margin:0 auto}
+    .descriptif_site{width:60%;margin:0 auto}
     a{color:#000000}
     .inner{background:transparent;}
     .nav_hor{
@@ -164,7 +171,7 @@ ul.menu {
    h2{
         font-family:@sansFontFamily; 
         color:#ffffff;
-        font-size: 1.6em;
+        font-size: 1.3em;
         margin: 0 0 -4px;
         text-align: left;
         text-transform: uppercase;
