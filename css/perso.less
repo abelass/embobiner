@@ -4,6 +4,7 @@
 @font-face{ font-family: 'lobster'; src: url('fonts/lobster-webfont.eot'); src: url('fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/lobster-webfont.woff') format('woff'), url('fonts/lobster-webfont.ttf') format('truetype'), url('fonts/lobster-webfont.svg#webfont') format('svg'); }
 
 @column:11%;
+@titleColor:#545a43;
 
 //Définitions générales
 body{
@@ -28,7 +29,7 @@ h1, .h1, .h1-like{
 h2,.h2{
   font-family: 'lobster', Arial, sans-serif;
   color:#545a43;
-  font-size:3.8em;
+  font-size:3.5em;
   margin-bottom:0.31em;
     font-weight:normal;}
   
@@ -39,6 +40,7 @@ h3,.h3,th{
   
   } 
 
+//Général*/
  #outils_embobiner {
     background-color: transparent;
     position:fixed;
@@ -54,13 +56,15 @@ h3,.h3,th{
     margin: 0;
     padding: 0;
     ul li {
-    display:block;
-    margin: 2px 0 1px;
+      display:block;
+      margin: 2px 0 1px;
+      }
+    }
+  } 
+
+.cartouche {
+    margin-bottom: 1em;
 }
-  }
-} 
-
-
 
 .more{font-size:0.75em;font-weight:bold} 
 /*Layout*/
@@ -255,6 +259,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     background:transparent;
     padding:2.5em}
   .logo {
+    margin:0;
+    padding:0;
     text-align:center;
     img{position:absolute;top:-35px}
     }
@@ -265,16 +271,18 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   div.logos{height:6.5em}
   .container{width:100%;}
   h1,.h1{
-    color:@linkColor;
-    border-bottom:0.071em @linkColor solid;
+    color:@titleColor;
+    border-bottom:0.071em @titleColor solid;
     display: inline-block;
-    margin :0.2em auto 0.5em auto; 
-    padding-bottom:0.1em;
+    margin :0.2em auto 0.3em auto; 
+    padding-bottom:0em;
+    line-height: 1.1em;
+    font-size:4.3em;
     }  
   .section.thematiques{
-    .descriptif{font-size:1.2em;}
+    .descriptif{font-size:1.1em;}
     li {
-      font-size: 83%;
+      font-size: 2em;
       width: @column;
       margin: 0 auto 0.4em 0;
       padding: 1em 0.7em;    
@@ -285,6 +293,10 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     a.browse {
       top:80px;
       }
+    li {
+        font-size: 0.8em;
+        width: 15%;
+    }
     .next{right:4em;}
     .prev{left:4em;}      
     }
