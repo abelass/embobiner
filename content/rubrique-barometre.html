@@ -1,0 +1,15 @@
+<BOUCLE_contenu_rubrique(RUBRIQUES){id_rubrique}{tout}>
+<section class="thematiques">
+	<header class="cartouche">
+		[(#LOGO_RUBRIQUE||image_reduire{200,200})]
+		<h2 class="h2 #EDIT{titre}">#TITRE</h2>
+	</header>
+    <div class="main">	
+
+	
+	[<div class="#EDIT{texte} texte">(#TEXTE*|propre)</div>]
+	
+
+</BOUCLE_contenu_rubrique>
+    </div>
+</section>
