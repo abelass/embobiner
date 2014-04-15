@@ -230,7 +230,7 @@ table.spip th, table.spip td {width:50%}
     }
   table{  
     border-collapse: separate;
-    border-spacing: 12px;
+    border-spacing: 46px 0;
     .spip_documents_left{
       width:20% !important;
       text-align:left;
@@ -244,6 +244,22 @@ table.spip th, table.spip td {border-top:none;}
 table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1) > th {
     background-color: transparent;
 }
+
+/*Qui sommes nous?*/
+
+.section.fomulaire_contact{
+  .descriptif{
+      text-align:left;
+      -moz-column-count: 2;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px; 
+    
+  }  
+}
+
 /*les iframes*/
 .modalbox {
   background:#ffffff;  padding:1em 3.5em;
@@ -306,9 +322,6 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     }
   .modalbox.article{
      h1{
-        //font-family:@sansFontFamily;
-        //font-size:1em;
-        //font-weight:bold;
         img{margin-bottom:0.2em;}
         a{color:@titleColor;}
         
