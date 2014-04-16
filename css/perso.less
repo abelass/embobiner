@@ -358,3 +358,65 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       width: 1000px;
     }
 }
+
+@media (max-width: 979px) {
+  body{
+   background-attachment: fixed;
+    background-clip: border-box;
+    background-color: #272A20;
+    background-image: url("http://test/plugins/embobiner/css/images/elections.png"), url("http://test/plugins/embobiner/css/images/background.png");
+    background-origin: padding-box;
+    background-position: 0 0px, 50% 0;
+    background-repeat: no-repeat;
+    background-size: 15% auto, auto auto;    
+  }
+
+.section.intro .descriptif_site {
+    font-size:0.8em;  }
+  #nav {font-size:1.25em;}
+  
+ .inner {
+    .menu.thematiques li {
+    width: 15%;
+  }
+  .nav_hor.parties li {
+    width: 13.7%;
+    }
+  }
+
+.thematiques body {
+  .modalbox.articles li {
+    width: 14%;
+    }
+  .modalbox.parti li {  
+      width: 15%;
+    }  
+  }
+}
+
+@media (max-width: 767px) {
+  h1, .h1, .h1-like{font-size:2.5em}
+      h2{font-size:2.3em}
+  #nav {
+    font-size:1.1em;
+    .logo {
+        display: none;
+        padding: 0 0.5em;
+        width: 7em;
+    }
+  }
+  
+#outils_embobiner {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 3%;
+  }
+
+}
+
+@media (max-width: 400px) {
+¡
+    #nav {font-size:1.1em;}
+    .left,.right{width:100%}
+}
