@@ -121,6 +121,10 @@ h3,.h3,th{
 }
 
 .more{font-size:0.75em;font-weight:bold} 
+
+  .left,.right{
+    width:45%;
+  } 
 /*Layout*/
 
 
@@ -149,7 +153,7 @@ ul.menu {
  
  .inner {
    background:#ffffff;padding: 1em 2.5em;
-   .menu li{
+   .menu.thematiques li{
      width:@column;
      line-height: 1.2em;}
    .nav_hor.parties{
@@ -212,7 +216,6 @@ ul.menu {
     margin:0;
     }
   li{
-    width:45%;
     font-size:1em;
     margin:0 0 1em 0;
     .left{margin-right:2%}
@@ -227,22 +230,17 @@ ul.menu {
 }
 
 /*Baromètre*/
-table.spip th, table.spip td {width:50%}
-.rubrique-texte-3 {
-  td {
-    br{clear:left}
-    }
-  table{  
-    border-collapse: separate;
-    border-spacing: 46px 0;
+.barometre {
+    p{clear:left}
+
     .spip_documents_left{
-      width:20% !important;
+      width:11% !important;
       text-align:left;
-       margin: 0;
-      img{margin:0}
+      margin: 0 1% 0 0;
+      img{margin:0;}
       
       }
-    }  
+
   }
 table.spip th, table.spip td {border-top:none;}
 table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1) > th {
@@ -252,9 +250,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
 /*Qui sommes nous?*/
 
 .section.fomulaire_contact{
-  .left,.right{
-    width:45%;
-  } 
+
   h3{
     font-size:1.1em;
     padding-bottom:0.5em} 
