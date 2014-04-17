@@ -22,6 +22,7 @@
 	<utilise nom="spipr_dist" compatibilite="[0.4.7;]" />
 	<utilise nom="Zcore" compatibilite="[2.3.0;]" />
 	<utilise nom="mediabox" compatibilite="[0.8.4;]" />	
+	<utilise nom="recommander" compatibilite="[ 1.0.6;[" />
 
 	<pipeline nom="jquery_plugins" inclure="embobiner_pipelines.php" />
 
