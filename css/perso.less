@@ -399,6 +399,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
 
 @media (max-width: 767px) {
   body{line-height:1.2em}
+  #content{font-size:0.9em}
+  
   h1, .h1, .h1-like{
     font-size:2.5em;
     margin-top: 0.7em;}
@@ -411,13 +413,13 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
         width: 7em;
     }
   }
-  
-#outils_embobiner {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    width: 3%;
-  }
+
+  #outils_embobiner {
+      margin: 0;
+      padding: 0;
+      top: 0;
+      width: 3%;
+    }
   .inner{
     .menu.thematiques li{width:13%;}
     .nav_hor.parties{
@@ -425,6 +427,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     }  
   }
 
+  label, input, button, select, textarea, input.submit{font-size: 0.8em;}
+  legend{font-size:1.1em}
 }
 
 @media (max-width: 564px) {
@@ -441,17 +445,27 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     .navbar .nav > li > a {
     padding: 0;
     }
-    .subMenu {top:1em} 
+    #nav{
+          ul li{float:none}
+    }
+    .navbar{margin:0}
+    .navbar-inner {min-height:0}
+    .section {margin-bottom:1em}  
+    .section.intro{
+      margin-top:0;
+      .nav_hor{height:8em}
+      }    
+    .subMenu {top:1em !important} 
       h1, .h1, .h1-like{
     font-size:1.5em;
     margin-top: 0.7em;}
     .section.intro{
-        nav_hor h2 {
+        .nav_hor h2 {
             font-size: 1em;
             margin: 0 0 -2px;
         }      
       .descriptif_site {width: 100%;} 
-       .nav_hor {width: 100%;}
+      .nav_hor {width: 100%;}
     }
        
 }
@@ -465,7 +479,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       } 
     }  
     
-.scrollable,.section.intro .nav_hor ul.parties{height:3.7em}
+  .scrollable,.section.intro .nav_hor ul.parties{height:3.7em}
+  .left,.right{width:100%}
 }
 
 @media (max-width: 357px) {
@@ -475,7 +490,6 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
        li{width:10%;}     
       } 
     }  
-    .left,.right{width:100%}
     .section.intro .nav_hor {
     width: 100%;
 }
