@@ -125,6 +125,19 @@ h3,.h3,th{
   .left,.right{
     width:45%;
   } 
+  
+.main{
+  dl{
+    padding: 1%;
+    width: 23%;
+    margin:0;
+    }
+    dt{
+      padding:0;margin:0;
+      }
+    dr.titre{width: auto !important}
+    
+}
 /*Layout*/
 
 
@@ -301,8 +314,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     li {
       font-size: 2em;
       width: @column;
-      margin: 0 auto 0.4em 0;
-      padding: 1em 0.7em;  
+      margin: 0;
+      padding: 1em 0;  
       font-size: 0.8em;  
       }
     }
@@ -312,7 +325,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       top:80px;
       }
     li {
-        width: 15%;
+        width: 16.5%;
     }
     .next{right:4em;}
     .prev{left:4em;}      
@@ -344,7 +357,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     .scrollable{height:23em}
     .texte{font-size:100%}
      li{
-      width:16.5%;
+      width:16.8%;
       padding:0;
       margin: 0 0.2%;
     }
@@ -364,7 +377,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
    background-attachment: fixed;
     background-clip: border-box;
     background-color: #272A20;
-    background-image: url("http://test/plugins/embobiner/css/images/elections.png"), url("http://test/plugins/embobiner/css/images/background.png");
+    background-image: url("http://test/plugins/embobiner/css/images/elections.png"), url("http://test/plugins/embobiner/css/images/background_small.jpg");
     background-origin: padding-box;
     background-position: 0 0px, 50% 0;
     background-repeat: no-repeat;
@@ -394,12 +407,12 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
      }
   .modalbox.articles {
     li {
-    width: 14%;
+    width: 16.5%;
     }
   
   }
   .modalbox.parti li {  
-      width: 15%;
+      width: 15.5%;
     }  
   }
   .navbar-responsive {
@@ -431,7 +444,9 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       width: 3%;
     }
   .inner{
-    .menu.thematiques li{width:13%;}
+    .menu.thematiques li{
+      line-height: 0.9em;
+      width:16%;}
     .nav_hor.parties{
       li{width:14%;}     
     }  
@@ -448,10 +463,12 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     .logo {
       img{max-width:11%}
     }
-
+  li .texte{
+    padding:0.6em 0.2em;
+    line-height:1em}
   .modalbox.articles {
     li {
-    width: 13%;
+    width: 16.6%;
     }  
   }
   .modalbox.parti li {  
@@ -463,12 +480,13 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
 @media (max-width: 564px) {
    #nav {font-size:1em;} 
    .inner{
-    .menu.thematiques li{width:12%;}
+    .menu.thematiques li{width:14%;}
     .nav_hor.parties{
-       li{width:12%;}     
+       li{width:13%;}     
       } 
     }
   .thematiques body {
+    .section.thematiques li {padding: 1em 0.2em}
       li .texte{height:59px}
       .logo {
         img{
@@ -478,7 +496,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   
     .modalbox.articles {
       li {
-      width: 12%;
+      width: 15%;
       }  
     }
     .modalbox.parti li {  
@@ -513,7 +531,12 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       .descriptif_site {width: 100%;} 
       .nav_hor {width: 100%;}
     }
-    
+  .main{
+    dl{
+      padding: 0;
+      width: 50%;
+      }
+    }    
   .thematiques body {
       h1,.h1{
       font-size:2em;
@@ -522,11 +545,11 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     div.logos { height: auto;}
     .modalbox.articles {
       li {
-      width: 10%;
+      width: 15%;
       }  
     }
     .modalbox.parti li {  
-        width: 10%;
+        width: 11%;
       }  
     }        
 }
@@ -551,7 +574,6 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
      a.browse {width: 24px; }
      a.browse.right{right:-1%} 
      a.browse.left{left:-1%} 
-    .section.thematiques li{padding: 1em 0.1em;} 
     li{     
        .texte {display:none}  
        }  
@@ -564,7 +586,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       }                    
     .modalbox.articles {    
       li {
-      width: 13.5%;
+      width: 15%;
       }  
     }
     .modalbox.parti {
@@ -587,4 +609,14 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     .section.intro .nav_hor {
     width: 100%;
   }
+  .thematiques body {                  
+    .modalbox.articles {    
+      li {
+      width: 14%;
+      }  
+    }
+    .modalbox.parti {
+      li {width: 13%;}       
+      } 
+    } 
 }
