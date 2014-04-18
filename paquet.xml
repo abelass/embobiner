@@ -1,7 +1,7 @@
 <paquet
 	prefix="embobiner"
 	categorie="squelette"
-	version="1.0.1"
+	version="1.0.2"
 	etat="dev"
 	compatibilite="[3.0.16;3.0.*]"
 	logo="prive/themes/spip/images/embobiner-64.png"
@@ -18,7 +18,7 @@
 
 	<necessite nom="wsps_html5" compatibilite="[1.0.2;]" />
 	<necessite nom="partenaires" compatibilite="[1.5.1;]" />
-	<necessite nom="cextras" compatibilite="[3.1.0;]" />	
+	<necessite nom="iextras" compatibilite="[3.1.0;]" />	
 	<utilise nom="spipr_dist" compatibilite="[0.4.7;]" />
 	<utilise nom="Zcore" compatibilite="[2.3.0;]" />
 	<utilise nom="mediabox" compatibilite="[0.8.4;]" />	
