@@ -1,0 +1,12 @@
+<title>[(#NOM_SITE_SPIP|textebrut)]</title>
+[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+[(#REM) Lien vers le flux RSS de la rubrique ]
+<meta property="og:title" content="[(#NOM_SITE_SPIP|textebrut)]" />
+[<meta property="og:description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+<BOUCLE_doc(DOCUMENTS) {id_document=60}{tout}>
+	[<meta property="og:image" content="(#URL_DOCUMENT|url_absolue)" />]
+</BOUCLE_doc>
+[<meta property="og:url" content="(#URL_RUBRIQUE|url_absolue)" />]
+<meta property="og:site_name" content="#NOM_SITE_SPIP" />
+<meta property="og:type" content="website"/>
+
