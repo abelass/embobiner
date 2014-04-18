@@ -540,10 +540,14 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       line-height: normal;}
     .section.thematiques .descriptif, .section.thematiques .chapo{font-size:1em}
     div.logos { height: auto;}
-    .modalbox.parti li {  
-       // width: 11%;
-      }  
-    }        
+    .modalbox.parti {
+        .scrollable {height: 64em;}
+        li {
+          min-height: 26em;  
+          width: 46%;
+          }  
+      }    
+    }    
 }
 
 @media (max-width: 433px) {
@@ -566,9 +570,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
      a.browse {width: 24px; }
      a.browse.right{right:-1%} 
      a.browse.left{left:-1%} 
-    li{     
-       .texte {display:none}  
-       }  
+
     .modalbox.article {
       .texte {
           -moz-column-count: 1;
@@ -578,12 +580,13 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       }                    
     .modalbox.articles {    
       li {
-      width: 15%;
+      width: 100%;
+      min-height:none;
       }  
     }
     .modalbox.parti {
       a.browse {width: 12px;}
-      li {width: 14%;}       
+      .scrollable{height: 79em;}       
       a.browse.left {left: -5%;}
       a.browse.right {right: -5%;}     
       } 
@@ -602,13 +605,9 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     width: 100%;
   }
   .thematiques body {                  
-    .modalbox.articles {    
-      li {
-      width: 14%;
-      }  
-    }
+
     .modalbox.parti {
-      li {width: 13%;}       
+      i {width: 100%;}       
       } 
     } 
 }
