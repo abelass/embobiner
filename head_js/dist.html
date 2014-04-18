@@ -11,11 +11,11 @@
 		// Call our responsive funtion every time the browser window is resized
 		$(window).resize(function() {
 			responsiveScrollable();
+		
 		});
 
 		//Adapatation au responsive du scrollable
 		function responsiveScrollable() {
-
 			// Set width of scrollable slides to width of browser window
 			var siteWidth = $('.nav_hor').width();
 			$('.scrollable .wrapper').css('width', siteWidth);

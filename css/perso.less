@@ -295,69 +295,68 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       left:47%}
     }
   
-
-  .texte{  line-height:normal;}
-
-  div.logos{height:6.5em}
-  .container{width:100%;}
-  h1,.h1{
-    color:@titleColor;
-    border-bottom:0.071em @titleColor solid;
-    display: inline-block;
-    margin :0.2em auto 0.3em auto; 
-    padding-bottom:0em;
-    line-height: 1.1em;
-    font-size:4.3em;
-    }  
-  .section.thematiques{
-    .descriptif,.chapo{font-size:1.2em;font-weight:normal}
-    li {
-      font-size: 2em;
-      width: @column;
-      margin: 0;
-      padding: 1em 0;  
-      font-size: 0.8em;  
+    .texte{  line-height:normal;}
+  
+    div.logos{height:6.5em}
+    .container{width:100%;}
+    h1,.h1{
+      color:@titleColor;
+      border-bottom:0.071em @titleColor solid;
+      display: inline-block;
+      margin :0.2em auto 0.3em auto; 
+      padding-bottom:0em;
+      line-height: 1.1em;
+      font-size:4.3em;
+      }  
+    .section.thematiques{
+      .descriptif,.chapo{font-size:1.2em;font-weight:normal}
+      li {
+        font-size: 2em;
+        width: @column;
+        margin: 0;
+        padding: 1em 0;  
+        font-size: 0.8em;  
+        }
       }
-    }
-  .modalbox.articles{
-    .descriptif,.texte{text-align:center}
-    a.browse {
-      top:80px;
+    .modalbox.articles{
+      .descriptif,.texte{text-align:center}
+      a.browse {
+        top:80px;
+        }
+      li {
+          width: 16.5%;
       }
-    li {
-        width: 16.5%;
-    }
-    .next{right:4em;}
-    .prev{left:4em;}      
-    }
-  .modalbox.article{
-     h1{
-        img{margin-bottom:0.2em;}
-        a{color:@titleColor;}
-        
-        }     
-    .texte{
-      text-align:left;
-      -moz-column-count: 2;
-      -moz-column-gap: 20px;
-      -webkit-column-count: 2;
-      -webkit-column-gap: 20px;
-      column-count: 2;
-      column-gap: 20px; 
-        strong{
-          color:@linkColor;
-          display:block;
-          margin-bottom: -0.9em;
-          font-weight:normal;
-          }          
+      .next{right:4em;}
+      .prev{left:4em;}      
       }
+    .modalbox.article{
+       h1{
+          img{margin-bottom:0.2em;}
+          a{color:@titleColor;}
+          
+          }     
+      .texte{
+        text-align:left;
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px; 
+          strong{
+            color:@linkColor;
+            display:block;
+            margin-bottom: -0.9em;
+            font-weight:normal;
+            }          
+        }
     }
   .modalbox.parti{
     .themes{position:relative;}
     .scrollable{height:23em}
     .texte{font-size:100%}
      li{
-      width:16.8%;
+      width:19%;
       padding:0;
       margin: 0 0.2%;
     }
@@ -399,11 +398,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
 
 .thematiques body {
   li{     
-     .texte {
-      height: 109px;
-      overflow: hidden;
-      margin-bottom: 0.2em;
-      }  
+     .texte {margin-bottom: 0.2em;}  
      }
   .modalbox.articles {
     li {
@@ -412,7 +407,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   
   }
   .modalbox.parti li {  
-      width: 15.5%;
+      width: 19.5%;
     }  
   }
   .navbar-responsive {
@@ -468,11 +463,13 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     line-height:1em}
   .modalbox.articles {
     li {
-    width: 16.6%;
+    width: 33%;
+    min-height: 26em;
     }  
   }
-  .modalbox.parti li {  
-      width: 13.5%;
+  .modalbox.parti { 
+    .scrollable{height:25em;} 
+
     }  
   }
 }
@@ -487,7 +484,6 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
     }
   .thematiques body {
     .section.thematiques li {padding: 1em 0.2em}
-      li .texte{height:59px}
       .logo {
         img{
           padding: 0.7em 0;
@@ -496,13 +492,14 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   
     .modalbox.articles {
       li {
-      width: 15%;
+      width: 48%;
       }  
     }
-    .modalbox.parti li {  
-        width: 12%;
-      }  
-    }       
+    .modalbox.parti {
+      .scrollable {height: 49em;}
+      li {width: 30%;}
+    }  
+  }       
 }
 
 @media (max-width: 521px){
@@ -543,13 +540,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
       line-height: normal;}
     .section.thematiques .descriptif, .section.thematiques .chapo{font-size:1em}
     div.logos { height: auto;}
-    .modalbox.articles {
-      li {
-      width: 15%;
-      }  
-    }
     .modalbox.parti li {  
-        width: 11%;
+       // width: 11%;
       }  
     }        
 }

@@ -56,14 +56,13 @@
         });
 
         function responsiveScrollable() {
-
             // Set width of scrollable slides to width of browser window
-            var siteWidth = $(window).width();
+            var siteWidth = $('.scrollable').width();
             $('.scrollable .wrapper').css('width', siteWidth);
 
             // Set scrollable height to be proportional to the aspect ratio of the slide's content - eg if in your design the slide is 1000w x 500h, this ratio would be 2
-            /* var bannerHeight = $(window).width() / 2;
-            $('.scrollable').css('height', bannerHeight);*/
+            // var bannerHeight = $(window).width();
+            //$('.scrollable').css('height', bannerHeight);
 
             // Use the api to reposition the slide once it's been resized (if the broswer is resized)
             var api = $(".scrollable").data('scrollable');
