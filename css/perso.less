@@ -10,10 +10,10 @@
 body{
   background-color:  #272a20;
   background:url('images/background.png')  #272a20 50% 0 no-repeat;  
-  background-image: url("images/elections.png"), url('images/logo.png'), url('images/background.png'); 
-  background-position:  0 0,100% 100%,50% 0;
+  background-image: url("images/elections.png"), url('images/background.png'); 
+  background-position:  0 0,50% 0;
   background-repeat: no-repeat;
-  background-size: auto,auto,auto;
+  background-size: auto,auto;
   background-attachment:fixed;
 }
 
@@ -138,6 +138,8 @@ h3,.h3,th{
     dr.titre{width: auto !important}
     
 }
+
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
 /*Layout*/
 
 
@@ -350,7 +352,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
             font-weight:normal;
             }          
         }
-      }
+    }
   .modalbox.parti{
     .themes{position:relative;}
     .scrollable{height:23em}
@@ -376,7 +378,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
    background-attachment: fixed;
     background-clip: border-box;
     background-color: #272A20;
-    background-image: url("images/elections.png"), url("images/background_small.jpg");
+    background-image: url("http://test/plugins/embobiner/css/images/elections.png"), url("http://test/plugins/embobiner/css/images/background_small.jpg");
     background-origin: padding-box;
     background-position: 0 0px, 50% 0;
     background-repeat: no-repeat;
@@ -489,15 +491,8 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
           padding: 0.7em 0;
         }
       }
-      
-     .modalbox.article {
-      .texte {
-          -moz-column-count: 1;
-          -moz-column-gap: 0px;
-          text-align: left;
-          }   
-      }   
-    .modalbox.articles {            
+  
+    .modalbox.articles {
       li {
       width: 48%;
       }  
@@ -578,11 +573,17 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
      a.browse.right{right:-1%} 
      a.browse.left{left:-1%} 
 
-                  
+    .modalbox.article {
+      .texte {
+          -moz-column-count: 1;
+          -moz-column-gap: 0px;
+          text-align: left;
+          }   
+      }                    
     .modalbox.articles {    
       li {
       width: 100%;
-      min-height:auto;
+      min-height:none;
       }  
     }
     .modalbox.parti {
@@ -608,7 +609,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   .thematiques body {                  
 
     .modalbox.parti {
-      li {width: 100%; min-height:auto;}       
+      li {width: 100%;}       
       } 
     } 
 }
