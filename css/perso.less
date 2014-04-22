@@ -350,7 +350,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
             font-weight:normal;
             }          
         }
-    }
+      }
   .modalbox.parti{
     .themes{position:relative;}
     .scrollable{height:23em}
@@ -489,8 +489,15 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
           padding: 0.7em 0;
         }
       }
-  
-    .modalbox.articles {
+      
+     .modalbox.article {
+      .texte {
+          -moz-column-count: 1;
+          -moz-column-gap: 0px;
+          text-align: left;
+          }   
+      }   
+    .modalbox.articles {            
       li {
       width: 48%;
       }  
@@ -571,13 +578,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
      a.browse.right{right:-1%} 
      a.browse.left{left:-1%} 
 
-    .modalbox.article {
-      .texte {
-          -moz-column-count: 1;
-          -moz-column-gap: 0px;
-          text-align: left;
-          }   
-      }                    
+                  
     .modalbox.articles {    
       li {
       width: 100%;
@@ -607,7 +608,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   .thematiques body {                  
 
     .modalbox.parti {
-      li {width: 100%;}       
+      li {width: 100%; min-height:none;}       
       } 
     } 
 }
