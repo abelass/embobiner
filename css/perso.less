@@ -217,10 +217,13 @@ ul.menu {
    .inner{background:transparent;}
 
   .player{
-position: relative;
+    position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+    margin: 4em 0 2em;
+    }
   .player iframe,
   .player object,
   .player embed {
@@ -590,20 +593,24 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
 
     .modalbox.article {
       .texte {
+          -webkit-column-count: 1;
+          -webkit-column-gap: 0px;       
           -moz-column-count: 1;
           -moz-column-gap: 0px;
+          column-count: 1;
+          column-gap: 0;           
           text-align: left;
           }   
       }                    
     .modalbox.articles {    
       li {
       width: 100%;
-      min-height:auto;
+      min-height:100%;
       }  
     }
     .modalbox.parti {
       a.browse {width: 12px;}
-      .scrollable{height: 79em;}       
+      .scrollable{height: 150em;}       
       a.browse.left {left: -5%;}
       a.browse.right {right: -5%;}     
       } 
@@ -624,7 +631,7 @@ table.spip tbody > tr:nth-child(2n+1) > td, table.spip tbody > tr:nth-child(2n+1
   .thematiques body {                  
 
     .modalbox.parti {
-      li {width: 100%;height:auto}       
+      li {width: 100%;height:100%}       
       } 
     } 
 }
