@@ -1,0 +1,5 @@
+<BOUCLE_part(SEO){objet=partenaire}{id_objet=#ENV{id_partenaire}}>
+[(#META_NAME|=={title}|oui)]<title>[(#META_CONTENT|textebrut)]</title>
+[(#META_NAME|=={description}|oui)<meta name="description" content="[(#META_CONTENT|textebrut)]" />]
+</BOUCLE_part>
+[<meta property="linkin" content="(#SELF|url_absolue)" />]
