@@ -2,4 +2,7 @@
 [(#META_NAME|=={title}|oui)]<title>[(#META_CONTENT|textebrut)]</title>
 [(#META_NAME|=={description}|oui)<meta name="description" content="[(#META_CONTENT|textebrut)]" />]
 </BOUCLE_part>
+<title>[(#NOM_SITE_SPIP|typo|textebrut)][ - (#SLOGAN_SITE_SPIP|typo|textebrut)]</title>
+[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+<//B_part>
 [<meta property="linkin" content="(#SELF|url_absolue)" />]
