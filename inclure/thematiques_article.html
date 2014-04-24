@@ -3,9 +3,7 @@
   <BOUCLE_partenaire(PARTENAIRES){id_article}{0,1}>
   #SET{id_partenaire,#ID_PARTENAIRE}
     <div class="logo">
-    	<a class="ajax"  href="[(#URL_PAGE{thematiques}
-    			 |parametre_url{id_partenaire,#ID_PARTENAIRE}
-    			 |parametre_url{type,parti})]" title="#NOM">
+    	<a class="ajax"  href="#URL_PARTENAIRE">
     	  [(#LOGO_PARTENAIRE|image_reduire{100})]
     	</a>
     </div>
