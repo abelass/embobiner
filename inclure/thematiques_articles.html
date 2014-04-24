@@ -17,7 +17,7 @@
 	  <li>
 	  <BOUCLE_parties(PARTENAIRES){id_article}{0,1}{par nom}>
 	  <div class="logos">
-		<a class="ajax nocache"  href="#URL_PARTENAIRE">[(#LOGO_PARTENAIRE|image_reduire{100})]</a>
+		<a class="ajax"  href="[(#URL_PARTENAIRE|parametre_url{id_partenaire,#ID_PARTENAIRE})]">[(#LOGO_PARTENAIRE|image_reduire{100})]</a>
 	   </div>
 	  </BOUCLE_parties>	
 		[<div class="texte">

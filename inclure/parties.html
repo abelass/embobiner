@@ -3,7 +3,7 @@
   <ul id="parties" class="menu parties">
 	<BOUCLE_partenaires(PARTENAIRES){par num nom,nom}>	  
 	  <li class="part_#ID_PARTENAIRE">
-	      <a class="mediabox boxIframe boxWidth-1200px boxHeight-1200px" href="#URL_PARTENAIRE">
+	      <a class="mediabox boxIframe boxWidth-1200px boxHeight-1200px" href="[(#URL_PARTENAIRE|parametre_url{id_partenaire,#ID_PARTENAIRE})]">
 		  [(#LOGO_PARTENAIRE|image_reduire{60})]
 		  </a>
 	  </li>
