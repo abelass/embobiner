@@ -1,6 +1,6 @@
 <?php
 /**
- * Utilisations de pipelines par Citizen Art Days
+ * Utilisations de pipelines par Embobiner
  *
  * @plugin     Embobiner
  * @copyright  2014
